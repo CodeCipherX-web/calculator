@@ -1,7 +1,7 @@
 /* Reset */
 * { margin:0; padding:0; box-sizing:border-box; font-family:"Poppins", sans-serif; }
 
-/* Body & Animated Background */
+/* Body & Gradient Background */
 body {
   min-height:100vh;
   overflow-x:hidden;
@@ -45,10 +45,11 @@ nav {
   padding:20px 40px; position:relative; z-index:10;
   backdrop-filter:blur(5px);
 }
-nav .logo{ font-size:1.8rem; font-weight:700; }
+nav .logo{ font-size:1.6rem; font-weight:700; }
 nav ul { list-style:none; display:flex; gap:20px; }
 nav ul li a { text-decoration:none; color:white; font-weight:600; padding:5px 10px; transition:0.3s; }
 nav ul li a:hover { background:rgba(255,255,255,0.2); border-radius:8px; }
+.menu-toggle { display:none; font-size:1.8rem; cursor:pointer; }
 
 /* Hero Section */
 .hero {
@@ -92,4 +93,27 @@ footer{
 
 /* Animations */
 @keyframes fadeInUp{
-  0%{opacity:0; transform:transl
+  0%{opacity:0; transform:translateY(30px);}
+  100%{opacity:1; transform:translateY(0);}
+}
+
+/* Responsive Styles */
+@media(max-width:1024px){
+  .hero-title{ font-size:2.5rem; }
+  .hero-subtitle{ font-size:1.1rem; }
+  .features{ gap:20px; }
+}
+@media(max-width:768px){
+  nav ul { display:none; flex-direction:column; position:absolute; top:60px; right:20px; background:rgba(0,0,0,0.4); border-radius:10px; padding:15px; }
+  nav ul.active{ display:flex; }
+  .menu-toggle{ display:block; color:white; }
+  .hero-title{ font-size:2rem; }
+  .hero-subtitle{ font-size:1rem; }
+  .features{ flex-direction:column; align-items:center; }
+}
+@media(max-width:480px){
+  .hero-title{ font-size:1.6rem; }
+  .hero-subtitle{ font-size:0.9rem; }
+  .btn{ padding:12px 25px; font-size:0.9rem; }
+  .feature{ width:90%; padding:20px; }
+}
