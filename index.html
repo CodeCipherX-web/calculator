@@ -1,80 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teddy's Smart Calculator 🧮</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teddy’s Smart Tools</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <!-- Floating Shapes -->
+  <div class="shapes">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
 
-<body class="neon">
-  <!-- 🌐 Navigation -->
+  <!-- Navigation -->
   <nav>
-    <div class="logo">🧮 SmartCalc</div>
+    <div class="logo">🧮 SmartTools</div>
     <ul>
-      <li><a href="index.html" class="active">Calculator</a></li>
-      <li><a href="#">BMI Tool</a></li>
-      <li><a href="#">Converter</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
     </ul>
   </nav>
 
-  <!-- 🧠 Header -->
-  <header>
-    <h1>Teddy's Smart Calculator</h1>
-    <p>Simple • Stylish • Functional</p>
-  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero-title">Welcome to <span>SmartTools</span></h1>
+    <p class="hero-subtitle">Interactive calculators, converters, and useful tools in one place</p>
+    <a href="calculator.html" class="btn">Try the Calculator</a>
+  </section>
 
-  <!-- 🌓 Theme Switcher -->
-  <div class="theme-switcher">
-    <label for="theme">Theme:</label>
-    <select id="theme" onchange="changeTheme(this.value)">
-      <option value="neon" selected>Neon</option>
-      <option value="dark">Dark</option>
-      <option value="light">Light</option>
-    </select>
-  </div>
-
-  <!-- 🧮 Calculator -->
-  <div class="calculator">
-    <textarea id="display" readonly></textarea>
-
-    <div class="buttons">
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button class="clear" onclick="clearDisplay()">C</button>
-
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button onclick="appendValue('/')">÷</button>
-
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-      <button onclick="appendValue('*')">×</button>
-
-      <button onclick="appendValue('0')">0</button>
-      <button onclick="appendValue('.')">.</button>
-      <button onclick="backspace()">⌫</button>
-      <button class="equals" onclick="calculate()">=</button>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <h2>Calculator</h2>
+      <p>All basic math operations, history tracking, and themes to make calculations fun.</p>
     </div>
-  </div>
+    <div class="feature">
+      <h2>BMI Calculator</h2>
+      <p>Coming soon: Check your BMI quickly and track your health progress.</p>
+    </div>
+    <div class="feature">
+      <h2>Unit Converter</h2>
+      <p>Coming soon: Convert units of length, weight, temperature, and more.</p>
+    </div>
+  </section>
 
-  <!-- 📜 History Panel -->
-  <div class="history-panel">
-    <h2>History</h2>
-    <div id="history"></div>
-  </div>
-
-  <!-- 📝 Footer -->
+  <!-- Footer -->
   <footer>
     <p>© 2025 Teddy Alvin | Built with ❤️ using HTML, CSS & JS</p>
   </footer>
-
-  <!-- Click Sound -->
-  <audio id="clickSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_b7c99558ef.mp3?filename=click-124467.mp3"></audio>
-
-  <script src="script.js"></script>
 </body>
 </html>
